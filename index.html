@@ -92,7 +92,14 @@
         gap: 1em;
       }
     .gallery a {
+      font-size: 0;
       display: inline-block;
+      transition: transform 1s;
+    }
+    .gallery img {max-width: 100%;}
+    .gallery a:hover, .gallery a:focus {
+      transform: scale(1.02);
+      transition: transform .33s;
     }
 
     footer {
@@ -139,6 +146,7 @@
       <li><a class="" href="https://www.instagr.am/automaticspirit" title="@automaticspirit" >instagram</a></li>
       <li><a class="" href="https://www.twitter.com/azezaroo" title="@azezaroo" >twitter</a></li>
       <li><a class="" href="https://www.twitch.tv/automaticspirit" title="@automaticspirit" >twitch</a></li>
+      <li><a class="" href="https://www.webtoons.com/en/challenge/catsup-on-top/list?title_no=665587" title="catsupontop" >WEBTOON</a></li>
     </ul>
   </footer>
   <script>
