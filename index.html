@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>AUTOMATICSPIRIT - convention showcase</title>
+  <meta name="description" content="Automaticspirit's OCDB">
+  <meta name="author" content="automaticspirit,alpha-zero">
+
+  <meta name="color-scheme" content="light dark" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Vollkorn:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="simple-lightbox.min.css">
+  <script src="simple-lightbox.min.js"></script>
+
+  <style type="text/css">
+
+    body {
+      --default: #444241;
+      --accent: #e58250;
+      --drop: #fdfdfd;
+    }
+    body.dark-mode {
+      --default: #fdfdfd;
+      --accent: #e58250;
+      --drop: #444241;
+    }
+
+    html,body { /* reset */
+      padding: 0; margin: 0;
+      width: 100%; height: 100%;
+
+      transition: background-color .33s, color .33s, border-color .33s;
+    }
+
+    h1,h2,h3,h4,h5,h6 /* reset */ {padding:0; margin:0;}
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--drop);
+      color: var(--default);
+    }
+
+    h1, h2, h3, h4, h5, h6 {font-family: 'Vollkorn', serif;}
+    h1 {}
+
+    a { font-weight: 700; text-decoration: none; color: var(--default); transition: color 1s; }
+    a:hover, a:focus { color: var(--accent); transition: color .33s; }
+
+    /****/
+
+    button#colormode {
+      font-size: 24px;
+      font-family: 'Material Icons';
+      color: var(--drop);
+
+      position: absolute; display: block;
+      top: 0.5rem; right: 0.5rem;
+      padding: .5rem;
+      background: var(--default);
+      border: none;
+      border-radius: 2rem;
+    }
+    button:hover, button:focus {
+      background-color: var(--accent);
+    }
+
+    header {
+      /* background-color: rgba(250,1,1,.1); */
+      text-align: center;
+      margin: 1em 1em 0;
+      border-bottom: 0.3rem solid var(--default) ;
+    }
+    header h1 {font-size: 5rem}
+
+    section {
+      margin: 1em 1em 0;
+    }
+    #descrip {text-align: center;}
+    #collection {
+    }
+      .gallery {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1em;
+      }
+    .gallery a {
+      display: inline-block;
+    }
+
+    footer {
+      /* background-color: rgba(250,1,1,.1); */
+      margin: 1em; padding: 1em;
+      text-align: center;
+      border-top: 0.3rem solid var(--default) ;
+      text-transform: lowercase;
+    }
+    footer ul {margin: 0; padding: 0;}
+    footer li {display: inline-block;}
+    footer li::before { content:'• ' }
+    footer li:last-child:after { content:' •' }
+  </style>
+
+</head>
+<body>
+  <button id="colormode" class="btn-toggle">
+    <span class="material-icons-outlined">visibility</span>
+  </button>
+  <header id="" class="">
+    <h1>AUTOMATICSPIRIT</h1>
+  </header>
+  <section id="descrip" class=""> <!-- description -->
+    <div>I'm automaticspirit. I'm an illustrator with a few different styles.</div>
+  </section>
+  <section id="collection" class=""> <!-- main -->
+    <div class="gallery">
+      <a href="images/01_waifu.png"><img src="images/thumbs/01_waifu.png" alt="" title=""/></a>
+      <a href="images/02_fischl.png"><img src="images/thumbs/02_fischl.png" alt="" title=""/></a>
+      <a href="images/03_yugi.png"><img src="images/thumbs/03_yugi.png" alt="" title=""/></a>
+      <a href="images/04_ironmouse.png"><img src="images/thumbs/04_ironmouse.png" alt="" title=""/></a>
+      <a href="images/05_hachi.png"><img src="images/thumbs/05_hachi.png" alt="" title=""/></a>
+      <a href="images/06_banner.png"><img src="images/thumbs/06_banner.png" alt="" title=""/></a>
+      <a href="images/07_charms.png"><img src="images/thumbs/07_charms.png" alt="" title=""/></a>
+      <a href="images/08_town.png"><img src="images/thumbs/08_town.png" alt="" title=""/></a>
+      <a href="images/09_hanginthere.png"><img src="images/thumbs/09_hanginthere.png" alt="" title=""/></a>
+      <a href="images/10_gloomy.png"><img src="images/thumbs/10_gloomy.png" alt="" title=""/></a>
+    </div>
+  </section>
+  <footer> <!-- Citations & Plugs -->
+    <ul>
+      <li><a class="" href="https://www.automaticspirit.com" title="personal website" >Homepage</a></li>
+      <li><a class="" href="https://www.instagr.am/automaticspirit" title="@automaticspirit" >instagram</a></li>
+      <li><a class="" href="https://www.twitter.com/azezaroo" title="@azezaroo" >twitter</a></li>
+      <li><a class="" href="https://www.twitch.tv/automaticspirit" title="@automaticspirit" >twitch</a></li>
+    </ul>
+  </footer>
+  <script>
+    var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+  </script>
+  <script>
+    const bodyClasses = document.querySelector('body').classList
+
+    // set the default preference equal to the current System preference
+    const systemPrefersDarkMode = window
+      .matchMedia('(prefers-color-scheme: dark)')
+      .matches
+
+    if (systemPrefersDarkMode) {
+      bodyClasses.classList.add('dark-mode')
+    }
+
+    // toggle dark mode when the button is clicked
+    document
+      .querySelector('button')
+      .addEventListener('click', () => bodyClasses.toggle('dark-mode'))
+  </script>
+</body>
+</html>
