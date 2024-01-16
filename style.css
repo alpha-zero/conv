@@ -60,6 +60,8 @@ section {
 	margin: 1em 1em 0;
 }
 #descrip {text-align: center;}
+#descrip a {color: var(--accent);}
+#descrip a:hover, #descrip a:active {color: var(--default)}
 
 #collection {
 }
@@ -75,6 +77,7 @@ section {
 	font-size: 0;
 	display: inline-block;
 	transition: transform 1s;
+    border-radius: 1em;
 }
 .gallery img {max-width: 100%;}
 .gallery a:hover, .gallery a:focus {
