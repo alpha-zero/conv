@@ -5,7 +5,9 @@
 # other marked files
 *.private.*
 *.afphoto
+*.afdesign
 
 # ignore old files
 *.old.*
-_old
+*_old
+old_*
