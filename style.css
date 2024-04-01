@@ -78,9 +78,12 @@ header nav a {
     color: var(--drop);
     filter: opacity(75%);
     transition: all .25s;
+    box-shadow: 0 1px 5px #00000045;
 }
 header nav a:not(:last-child) {margin-right: .5em;}
 header nav a:hover, header nav a:focus {
+    color: var(--drop);
+    background-color: var(--accent);
     transform: translateY(0em); 
     filter: opacity(100%);
     transition: all .25s;
@@ -130,6 +133,6 @@ footer {
     padding-bottom: .5em;
     height: calc(300px - .5em);
     background: 
-        no-repeat url(images/footer-s.png) right,
-        repeat-x url(images/footer.png) right;
+        no-repeat url(images/footer-s.webp) right,
+        repeat-x url(images/footer.webp) right;
 }
